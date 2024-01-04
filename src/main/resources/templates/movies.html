@@ -5,12 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Year Recap</title>
+    <title>Movies</title>
 </head>
 <body>
-    <h1 th:text="|Best of the ${year} by ${name}|"></h1>
-    <h2><a th:href="@{/}"><< Home</a></h2>
-    <h2><a th:href="@{/songs}" th:text="|Check your ${year}'s favorite songs >>|"></a></h2>
-    <h2><a th:href="@{/movies}" th:text="|Check your ${year}'s favorite movies >>|"></a></h2>
+<h1>Here's your movies</h1>
+<ul>
+    <li th:each="movie : ${movies}">
+        <h2><a th:href="@{/movies/details(movieId=${movie.id})}" th:text="${movie.title}"></a></h2>
+    </li>
+</ul>
+<h2><a th:href="@{/year_recap}"><< Go back</a></h2>
 </body>
 </html>
