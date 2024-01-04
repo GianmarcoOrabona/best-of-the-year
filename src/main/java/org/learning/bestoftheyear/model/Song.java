@@ -5,14 +5,14 @@ public class Song {
 
     private int id;
     private String title;
-    private String author;
+    private String artist;
 
     // COSTRUTTORI
 
-    public Song(int id, String title, String author) {
+    public Song(int id, String title, String artist) {
         this.id = id;
         this.title = title;
-        this.author = author;
+        this.artist = artist;
     }
 
 
@@ -34,12 +34,12 @@ public class Song {
         this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getArtist() {
+        return artist;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 
     // METODI
@@ -49,7 +49,7 @@ public class Song {
         return "Song{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
+                ", author='" + artist + '\'' +
                 '}';
     }
 }

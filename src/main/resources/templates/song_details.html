@@ -5,10 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Year Recap</title>
+    <title>Songs</title>
 </head>
 <body>
-    <h1 th:text="|Best of the ${year} by ${name}|"></h1>
-    <a th:href="@{/}"><< Home</a>
+<div th:object="${song}">
+    <h1 th:text="*{title}"></h1>
+    <h3 th:text="*{artist}"></h3>
+</div>
 </body>
 </html>
