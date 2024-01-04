@@ -8,10 +8,12 @@
     <title>Songs</title>
 </head>
 <body>
+    <h1>Here's your songs</h1>
     <ul>
         <li th:each="song : ${songs}">
-            <a th:href="@{/songs/details(songId=${song.id})}" th:text="${song.title}"></a>
+            <h2><a th:href="@{/songs/details(songId=${song.id})}" th:text="${song.title}"></a></h2>
         </li>
     </ul>
+    <h2><a th:href="@{/year_recap}"><< Go back</a></h2>
 </body>
 </html>

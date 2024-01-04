@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1 th:text="|Best of the ${year} by ${name}|"></h1>
-    <a th:href="@{/}"><< Home</a>
+    <h2><a th:href="@{/}"><< Home</a></h2>
+    <h2><a th:href="@{/songs}" th:text="|Check your ${year}'s favorite songs >>|"></a></h2>
 </body>
 </html>
