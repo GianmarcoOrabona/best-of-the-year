@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/resources :: head('Movies')"></head>
+<body>
+
+    <header>
+        <h1 class="text-center my-4">Here's your movies</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item" th:each="movie : ${movies}">
+                    <h2><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" th:href="@{/movies/details(movieId=${movie.id})}" th:text="${movie.title}"></a></h2>
+                </li>
+            </ul>
+            <a class="btn btn-primary mt-4" th:href="@{/year_recap}">Go back</a>
+        </div>
+    </main>
+
+<th:block th:replace="fragments/resources :: script"></th:block>
+</body>
+</html>

@@ -23,7 +23,7 @@ public class SongsController {
         List<Song> songs = getSong();
 
         model.addAttribute("songs", songs);
-        return "songs";
+        return "/songs/songs";
     }
 
     @GetMapping("/details")
@@ -31,7 +31,7 @@ public class SongsController {
         // Cerco la canzone con l'ID come parametro
         Song song = getSongById(songId);
         model.addAttribute("song", song);
-        return "song_details";
+        return "/songs/song_details";
     }
 
     // METODI

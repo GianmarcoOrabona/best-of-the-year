@@ -23,7 +23,7 @@ public class MoviesController {
         List<Movie> movies = getMovie();
 
         model.addAttribute("movies", movies);
-        return "movies";
+        return "/movies/movies";
     }
 
     @GetMapping("/details")
@@ -31,7 +31,7 @@ public class MoviesController {
         // Cerco il film con l'ID come parametro
         Movie movie = getMovieById(movieId);
         model.addAttribute("movie", movie);
-        return "movie_details";
+        return "/movies/movie_details";
     }
 
     // METODI
